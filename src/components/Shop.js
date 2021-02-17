@@ -7,7 +7,7 @@ const Shop = () => {
 
   const getItems = async () => {
     const data = await fetch(
-      'https://www.cheapshark.com/api/1.0/deals?storeID=1&pageSize=10'
+      'https://www.cheapshark.com/api/1.0/deals?storeID=1'
     );
     const response = await data.json();
     setItems(response);

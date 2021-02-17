@@ -1,5 +1,6 @@
 .Card {
-  margin: 2rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .Card-img-container {
@@ -8,4 +9,19 @@
 
 .Card-title {
   font-size: 2.4rem;
+  margin-top: 0.3rem;
+}
+.Card-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0.5rem 0;
+  font-size: 1.4rem;
+}
+
+.Card-deal-rating {
+  font-weight: 700;
+}
+
+.Card-link {
+  font-size: 1.3rem;
 }

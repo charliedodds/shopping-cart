@@ -56,5 +56,18 @@ h2 {
 }
 
 h1 {
+  margin-top: 2rem;
   font-size: 2.8rem;
+}
+
+.red-text {
+  color: red;
+}
+
+.orange-text {
+  color: orange;
+}
+
+.green-text {
+  color: green;
 }
