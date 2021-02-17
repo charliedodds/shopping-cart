@@ -1,0 +1,11 @@
+.Card {
+  margin: 2rem;
+}
+
+.Card-img-container {
+  width: 100%;
+}
+
+.Card-title {
+  font-size: 2.4rem;
+}
