@@ -1,7 +1,13 @@
-import '../styles/App.css';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
-  return <div className='App'></div>;
-}
+import ShopApp from './ShopApp';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <ShopApp />
+    </BrowserRouter>
+  );
+};
 
 export default App;

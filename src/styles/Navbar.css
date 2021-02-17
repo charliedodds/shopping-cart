@@ -1,0 +1,53 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  background-color: #555;
+  color: #cdcdcd;
+  font-size: 1.6rem;
+}
+
+.Navbar i {
+  font-size: 2.75rem;
+}
+
+.Navbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+.Navbar-logo,
+.Navbar-btn {
+  margin: 1rem;
+}
+
+.Navbar-links {
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.Navbar-link:hover,
+.Navbar-btn:hover,
+.Navbar-active {
+  color: white;
+}
+
+.Navbar-btn {
+  position: relative;
+}
+
+.Navbar-num-items {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: absolute;
+  top: 46%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+}
