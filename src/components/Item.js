@@ -9,6 +9,7 @@ import '../styles/Item.css';
 
 const Item = ({ basket, setBasket }) => {
   const [item, setItem] = useState({});
+  const [qty, setQty] = useState(1);
   const { dealID } = useParams();
 
   const getItem = async () => {
@@ -24,11 +25,22 @@ const Item = ({ basket, setBasket }) => {
     getItem();
   }, []);
 
-  const handleClick = () => {
-    setBasket([
-      ...basket,
-      { name: item.gameInfo.name, price: item.gameInfo.salePrice },
-    ]);
+  const handleChange = (e) => {
+    setQty(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let itemsToAdd = [];
+    for (let i = qty; i > 0; i--) {
+      itemsToAdd.push({
+        name: item.gameInfo.name,
+        price: item.gameInfo.salePrice,
+      });
+    }
+    setBasket([...basket, ...itemsToAdd]);
+    console.log(basket);
+    setQty(1);
   };
 
   return (
@@ -65,9 +77,23 @@ const Item = ({ basket, setBasket }) => {
           </section>
         </>
       )}
-      <button className='Item-add-to-cart' onClick={handleClick}>
-        <i className='fas fa-cart-plus'></i>
-      </button>
+      <form onSubmit={handleSubmit}>
+        <p>Add to cart</p>
+        <section className='Item-input-container'>
+          <label htmlFor='qty'>Quantity:</label>
+          <input
+            className='Item-input'
+            id='qty'
+            onChange={handleChange}
+            type='number'
+            min='0'
+            value={qty}
+          />
+        </section>
+        <button className='Item-add-to-cart'>
+          <i className='fas fa-cart-plus'></i>
+        </button>
+      </form>
     </article>
   );
 };

@@ -31,6 +31,10 @@
   margin: 0.5rem 0;
 }
 
+.Item-input-container {
+  display: flex;
+}
+
 .Item-add-to-cart {
   margin: 1rem auto;
   font-size: 3rem;

@@ -60,6 +60,17 @@ h1 {
   font-size: 2.8rem;
 }
 
+form {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+input {
+  width: 20%;
+  margin-left: auto;
+  padding: 0.25rem;
+}
+
 .red-text {
   color: red;
 }
