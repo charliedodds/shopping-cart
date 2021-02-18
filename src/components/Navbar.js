@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import '../styles/Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ numItems }) => {
   return (
     <nav className='Navbar'>
       <figure className='Navbar-logo'>
@@ -32,7 +32,7 @@ const Navbar = () => {
       </ul>
       <button className='Navbar-btn'>
         <i className='fas fa-shopping-cart'></i>
-        <span className='Navbar-num-items'>0</span>
+        <span className='Navbar-num-items'>{numItems}</span>
       </button>
     </nav>
   );

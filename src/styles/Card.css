@@ -18,10 +18,6 @@
   font-size: 1.4rem;
 }
 
-.Card-deal-rating {
-  font-weight: 700;
-}
-
-.Card-link {
-  font-size: 1.3rem;
+.Card:hover .Card-title {
+  font-weight: bold;
 }

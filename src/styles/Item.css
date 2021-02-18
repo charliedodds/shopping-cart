@@ -1,0 +1,37 @@
+.Item {
+  margin: 1rem;
+}
+
+.Item-img {
+  margin: 1.5rem 0;
+}
+
+.Item-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Item-sale {
+  font-size: 3rem;
+}
+
+.Item-retail {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.Item-rating {
+  text-align: end;
+  font-size: 3rem;
+}
+
+.Item-review-info,
+.Item-retail {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+}
+
+.Item-add-to-cart {
+  margin: 1rem auto;
+  font-size: 3rem;
+}
