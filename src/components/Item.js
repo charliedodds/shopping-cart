@@ -55,7 +55,9 @@ const Item = ({ basket, setBasket }) => {
 	};
 
 	const handleDecrement = () => {
-		setQty(qty - 1);
+		if (qty > 1) {
+			setQty(qty - 1);
+		}
 	};
 
 	return (
