@@ -2,6 +2,11 @@
 	margin: 1rem;
 }
 
+.Checkout-empty {
+	width: 80%;
+	margin: 2rem auto;
+}
+
 .Checkout-item {
 	display: flex;
 	width: 100%;
@@ -11,6 +16,11 @@
 
 .Checkout-info {
 	width: 49%;
+}
+
+.Checkout-title,
+.Checkout-container {
+	margin: 0.125rem 0;
 }
 
 .Checkout-title {
@@ -29,6 +39,8 @@
 
 .Checkout-img-container {
 	width: 49%;
+	display: flex;
+	align-items: center;
 }
 
 .Checkout-img {

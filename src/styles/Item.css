@@ -9,6 +9,7 @@
 .Item-info {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 2rem;
 }
 
 .Item-sale {
@@ -48,7 +49,9 @@
 
 .Item-input {
 	height: 50%;
+	width: 15%;
 	margin: 0;
+	text-align: center;
 }
 
 .Item-add-to-cart {

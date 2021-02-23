@@ -22,6 +22,12 @@ const Checkout = ({ basket, setBasket }) => {
 	return (
 		<section className='Checkout'>
 			<h1>Checkout</h1>
+
+			{basket.length === 0 && (
+				<p className='Checkout-empty'>
+					Add items to your basket to see them here!
+				</p>
+			)}
 			{basket &&
 				basket.map((item) => (
 					<article key={item.id} id={item.id} className='Checkout-item'>
