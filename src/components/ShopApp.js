@@ -14,12 +14,12 @@ const ShopApp = () => {
 		<main className='ShopApp'>
 			<Navbar numItems={basket.length} />
 			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route exact path='/shop' component={Shop} />
-				<Route exact path='/shop/:dealID'>
+				<Route exact path='/shopping-cart/' component={Home} />
+				<Route exact path='/shopping-cart/shop' component={Shop} />
+				<Route exact path='/shopping-cart/shop/:dealID'>
 					<Item basket={basket} setBasket={setBasket} />
 				</Route>
-				<Route exact path='/checkout'>
+				<Route exact path='/shopping-cart/checkout'>
 					<Checkout basket={basket} setBasket={setBasket} />
 				</Route>
 			</Switch>
