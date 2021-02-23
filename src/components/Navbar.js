@@ -30,10 +30,12 @@ const Navbar = ({ numItems }) => {
           </NavLink>
         </li>
       </ul>
-      <button className='Navbar-btn'>
-        <i className='fas fa-shopping-cart'></i>
-        <span className='Navbar-num-items'>{numItems}</span>
-      </button>
+      <NavLink exact to='/checkout' activeClassName='Navbar-active'>
+        <button className='Navbar-btn'>
+          <i className='fas fa-shopping-cart'></i>
+          <span className='Navbar-num-items'>{numItems}</span>
+        </button>
+      </NavLink>
     </nav>
   );
 };

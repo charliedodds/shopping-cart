@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Shop from './Shop';
 import Item from './Item';
+import Checkout from './Checkout';
 
 const ShopApp = () => {
   const [basket, setBasket] = useState([]);
@@ -17,6 +18,9 @@ const ShopApp = () => {
         <Route exact path='/shop' component={Shop} />
         <Route exact path='/shop/:dealID'>
           <Item basket={basket} setBasket={setBasket} />
+        </Route>
+        <Route exact path='/checkout'>
+          <Checkout basket={basket} />
         </Route>
       </Switch>
     </main>

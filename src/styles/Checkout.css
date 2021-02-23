@@ -1,0 +1,36 @@
+.Checkout {
+	margin: 1rem;
+}
+
+.Checkout-item {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin: 2rem 0;
+}
+
+.Checkout-info {
+	width: 49%;
+}
+
+.Checkout-title {
+	text-align: left;
+	margin-bottom: 0.5rem;
+}
+
+.Checkout-img-container {
+	width: 49%;
+}
+
+.Checkout-img {
+	width: 100%;
+}
+
+.Checkout-price {
+	font-size: 1.6rem;
+}
+
+.total {
+	margin: 2rem;
+	text-align: center;
+}
