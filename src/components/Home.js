@@ -12,6 +12,10 @@ const Home = () => (
 			Head to the Shop tab to see the top 60 current sales (ordered by how good
 			the sale is, not by price or rating).
 		</p>
+		<p className='Home-para'>
+			This website is not affiliated with Steam in any way shape or form, I just
+			needed an API which displayed images and prices.
+		</p>
 	</section>
 );
 

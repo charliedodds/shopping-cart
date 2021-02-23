@@ -1,41 +1,57 @@
 .Item {
-  margin: 1rem;
+	margin: 1rem;
 }
 
 .Item-img {
-  margin: 1.5rem 0;
+	margin: 1.5rem 0;
 }
 
 .Item-info {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .Item-sale {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 
 .Item-retail {
-  text-decoration: line-through;
-  color: #555;
+	text-decoration: line-through;
+	color: #555;
 }
 
 .Item-rating {
-  text-align: end;
-  font-size: 3rem;
+	text-align: end;
+	font-size: 3rem;
 }
 
 .Item-review-info,
 .Item-retail {
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
+	font-size: 1.4rem;
+	margin: 0.5rem 0;
 }
 
 .Item-input-container {
-  display: flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.Item-inputs {
+	display: flex;
+	align-items: center;
+}
+
+.Item-button:nth-of-type(1) {
+	margin-left: auto;
+}
+
+.Item-input {
+	height: 50%;
+	margin: 0;
 }
 
 .Item-add-to-cart {
-  margin: 1rem auto;
-  font-size: 3rem;
+	margin: 1rem auto;
+	font-size: 3rem;
 }

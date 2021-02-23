@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 import editImgSrc from '../controllers/editImgSrc';
 
@@ -26,7 +27,11 @@ const Item = ({ basket, setBasket }) => {
 	}, []);
 
 	const handleChange = (e) => {
-		setQty(e.target.value);
+		if (typeof e.target.value === 'string') {
+			setQty(parseInt(e.target.value));
+		} else {
+			setQty(e.target.value);
+		}
 	};
 
 	const handleSubmit = (e) => {
@@ -37,11 +42,20 @@ const Item = ({ basket, setBasket }) => {
 				name: item.gameInfo.name,
 				img: editImgSrc(item.gameInfo.thumb),
 				price: item.gameInfo.salePrice,
+				id: uuidv4(),
 			});
 		}
 		setBasket([...basket, ...itemsToAdd]);
 		console.log(basket);
 		setQty(1);
+	};
+
+	const handleIncrement = () => {
+		setQty(qty + 1);
+	};
+
+	const handleDecrement = () => {
+		setQty(qty - 1);
 	};
 
 	return (
@@ -82,16 +96,32 @@ const Item = ({ basket, setBasket }) => {
 				<p>Add to cart</p>
 				<section className='Item-input-container'>
 					<label htmlFor='qty'>Quantity:</label>
-					<input
-						className='Item-input'
-						id='qty'
-						onChange={handleChange}
-						type='number'
-						min='0'
-						value={qty}
-					/>
+					<section className='Item-inputs'>
+						<button
+							type='button'
+							className='Item-button'
+							onClick={handleIncrement}
+						>
+							<i className='fas fa-caret-up'></i>
+						</button>
+						<input
+							className='Item-input'
+							id='qty'
+							onChange={handleChange}
+							type='number'
+							min='1'
+							value={qty}
+						/>
+						<button
+							type='button'
+							className='Item-button'
+							onClick={handleDecrement}
+						>
+							<i className='fas fa-caret-down'></i>
+						</button>
+					</section>
 				</section>
-				<button className='Item-add-to-cart'>
+				<button type='submit' className='Item-add-to-cart'>
 					<i className='fas fa-cart-plus'></i>
 				</button>
 			</form>

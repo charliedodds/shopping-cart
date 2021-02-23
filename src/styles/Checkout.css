@@ -15,7 +15,16 @@
 
 .Checkout-title {
 	text-align: left;
-	margin-bottom: 0.5rem;
+}
+
+.Checkout-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Checkout-price {
+	font-size: 1.6rem;
 }
 
 .Checkout-img-container {
@@ -24,10 +33,6 @@
 
 .Checkout-img {
 	width: 100%;
-}
-
-.Checkout-price {
-	font-size: 1.6rem;
 }
 
 .total {
