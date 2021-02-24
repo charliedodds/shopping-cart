@@ -19,6 +19,9 @@
 
 .Checkout-info {
 	width: 49%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .Checkout-title,
@@ -69,5 +72,23 @@
 @media screen and (min-width: 1023.98px) {
 	.Checkout-items {
 		width: 40%;
+	}
+}
+
+@media screen and (min-width: 1439.98px) {
+	.Checkout-items {
+		width: 30%;
+	}
+}
+
+@media screen and (min-width: 1559.98px) {
+	.Checkout-items {
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 1919.98px) {
+	.Checkout-items {
+		width: 20%;
 	}
 }

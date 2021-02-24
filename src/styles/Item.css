@@ -72,3 +72,21 @@
 		margin: 3rem 0;
 	}
 }
+
+@media screen and (min-width: 1023.98px) {
+	.Item {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width: 1439.98px) {
+	.Item {
+		width: 25%;
+	}
+}
+
+@media screen and (min-width: 1559.98px) {
+	.Item {
+		width: 20%;
+	}
+}
