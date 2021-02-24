@@ -28,23 +28,25 @@ const Checkout = ({ basket, setBasket }) => {
 					Add items to your basket to see them here!
 				</p>
 			)}
-			{basket &&
-				basket.map((item) => (
-					<article key={item.id} id={item.id} className='Checkout-item'>
-						<section className='Checkout-info'>
-							<h2 className='Checkout-title'>{item.name}</h2>
-							<section className='Checkout-container'>
-								<p className='Checkout-price'>£{item.price}</p>
-								<button onClick={handleClick}>
-									<i className='far fa-trash-alt'></i>
-								</button>
+			<section className='Checkout-items'>
+				{basket &&
+					basket.map((item) => (
+						<article key={item.id} id={item.id} className='Checkout-item'>
+							<section className='Checkout-info'>
+								<h2 className='Checkout-title'>{item.name}</h2>
+								<section className='Checkout-container'>
+									<p className='Checkout-price'>£{item.price}</p>
+									<button onClick={handleClick}>
+										<i className='far fa-trash-alt'></i>
+									</button>
+								</section>
 							</section>
-						</section>
-						<figure className='Checkout-img-container'>
-							<img className='Checkout-img' src={item.img} alt={item.name} />
-						</figure>
-					</article>
-				))}
+							<figure className='Checkout-img-container'>
+								<img className='Checkout-img' src={item.img} alt={item.name} />
+							</figure>
+						</article>
+					))}
+			</section>
 			<section className='total'>
 				<p>
 					Total: £

@@ -24,8 +24,10 @@ const Shop = () => {
 		<section className='Shop'>
 			<h1>Steam games on sale</h1>
 			<p className='Shop-subtitle'>Ordered by how good the deal is</p>
-			{items &&
-				items.map((item) => <Card key={item.internalName} item={item} />)}
+			<section className='Shop-container'>
+				{items &&
+					items.map((item) => <Card key={item.internalName} item={item} />)}
+			</section>
 		</section>
 	);
 };

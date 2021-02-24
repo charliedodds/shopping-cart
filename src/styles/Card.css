@@ -19,3 +19,25 @@
 	margin: 0.75rem 0.5rem 0;
 	font-size: 1.4rem;
 }
+
+@media screen and (min-width: 767.98px) {
+	.Card {
+		display: inline-block;
+	}
+
+	.Card-link {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1023.98px) {
+	.Card-link {
+		width: 33%;
+	}
+}
+
+@media screen and (min-width: 1439.98px) {
+	.Card-link {
+		width: 25%;
+	}
+}

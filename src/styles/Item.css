@@ -58,3 +58,17 @@
 	margin: 1rem auto;
 	font-size: 3rem;
 }
+
+@media screen and (min-width: 767.98px) {
+	.Item {
+		width: 50%;
+		margin: auto;
+	}
+	.Item-title {
+		margin: 10rem 0 3rem;
+	}
+
+	.Item-info {
+		margin: 3rem 0;
+	}
+}

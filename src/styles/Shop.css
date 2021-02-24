@@ -1,4 +1,20 @@
 .Shop-subtitle {
 	text-align: center;
-	margin-top: 1rem;
+	margin: 1rem 0 2rem;
+}
+
+.Shop-container {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 767.98px) {
+	.Shop {
+		width: 80%;
+		margin: auto;
+	}
+	.Shop-container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 }

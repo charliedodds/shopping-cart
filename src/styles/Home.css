@@ -20,3 +20,25 @@
 	font-size: 1.4rem;
 	line-height: 2rem;
 }
+
+@media screen and (min-width: 767.98px) {
+	.Home {
+		width: 60%;
+		margin: auto;
+	}
+
+	.Home-logo {
+		margin: 6rem auto;
+	}
+}
+
+@media screen and (min-width: 1023.98px) {
+	.Home {
+		width: 40%;
+		margin: auto;
+	}
+
+	.Home-logo {
+		width: 50%;
+	}
+}
