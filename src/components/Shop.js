@@ -13,7 +13,6 @@ const Shop = () => {
 		);
 		const response = await data.json();
 		setItems(response);
-		console.log(items);
 	};
 
 	useEffect(() => {

@@ -10,10 +10,6 @@ const Checkout = ({ basket, setBasket }) => {
 
 	getPrices(basket);
 
-	console.log(prices);
-
-	console.log(basket);
-
 	const handleClick = (e) => {
 		const id = e.target.closest('article').id;
 		setBasket(basket.filter((item) => item.id !== id));

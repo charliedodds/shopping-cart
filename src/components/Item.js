@@ -19,7 +19,6 @@ const Item = ({ basket, setBasket }) => {
 		);
 		const data = await response.json();
 		setItem(data);
-		console.log(data);
 	};
 
 	useEffect(() => {
@@ -46,7 +45,6 @@ const Item = ({ basket, setBasket }) => {
 			});
 		}
 		setBasket([...basket, ...itemsToAdd]);
-		console.log(basket);
 		setQty(1);
 	};
 
