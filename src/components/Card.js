@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import editImgSrc from '../controllers/editImgSrc';
+import editImgSrc from '../services/editImgSrc';
 
 import Rating from './Rating';
 

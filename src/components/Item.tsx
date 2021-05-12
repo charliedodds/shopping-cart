@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import IItem from '../interfaces/IItem';
 
-import editImgSrc from '../controllers/editImgSrc';
+import editImgSrc from '../services/editImgSrc';
 
 import Rating from './Rating';
 
@@ -48,7 +48,7 @@ const Item = ({ basket, setBasket }: Props) => {
     for (let i = qty; i > 0; i--) {
       itemsToAdd.push({
         name: item?.gameInfo.name,
-        img: editImgSrc(item?.gameInfo.thumb),
+        img: item?.gameInfo.thumb ? editImgSrc(item?.gameInfo.thumb) : '',
         price: item?.gameInfo.salePrice,
         id: uuidv4(),
       });
