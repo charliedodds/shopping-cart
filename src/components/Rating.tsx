@@ -1,8 +1,13 @@
 import '../styles/Rating.css';
 
-const Rating = ({ count, rating }) => {
-  const getRatingClass = (count, rating) => {
-    if (count === '0') {
+type Props = {
+  count: number;
+  rating: number;
+};
+
+const Rating = ({ count, rating }: Props) => {
+  const getRatingClass = (count: number, rating: number): string => {
+    if (count === 0) {
       return '';
     } else if (rating <= 50) {
       return 'red-text';
@@ -14,7 +19,7 @@ const Rating = ({ count, rating }) => {
   };
   return (
     <p className={`rating ${getRatingClass(count, rating)}`}>
-      {count === '0' ? 'Unrated' : rating}
+      {count === 0 ? 'Unrated' : rating}
     </p>
   );
 };
