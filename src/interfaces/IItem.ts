@@ -8,6 +8,7 @@ interface IItem {
     salePrice: string;
     retailPrice: string;
   };
+  internalName: string;
 }
 
 export default IItem;
