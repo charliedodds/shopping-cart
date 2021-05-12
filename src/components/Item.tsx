@@ -23,10 +23,10 @@ const Item = ({ basket, setBasket }: Props) => {
   const { dealID } = useParams<{ dealID?: string }>();
 
   const getItem = async () => {
-    const response = await fetch(
+    const response: Response = await fetch(
       `https://www.cheapshark.com/api/1.0/deals?id=${dealID}`
     );
-    const data = await response.json();
+    const data: IItem = await response.json();
     setItem(data);
   };
 
