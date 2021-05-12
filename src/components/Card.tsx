@@ -6,8 +6,19 @@ import Rating from './Rating';
 
 import '../styles/Card.css';
 
-const Card = ({ item }) => {
-  const imgSrc = editImgSrc(item.thumb);
+type Props = {
+  item: {
+    title: string;
+    dealID: string;
+    salePrice: string;
+    steamRatingCount: string;
+    steamRatingPercent: string;
+    thumb: string;
+  };
+};
+
+const Card = ({ item }: Props) => {
+  const imgSrc: string = editImgSrc(item.thumb);
 
   return (
     <Link to={`/shopping-cart/shop/${item.dealID}`} className="Card-link">
@@ -23,8 +34,8 @@ const Card = ({ item }) => {
         <section className="Card-info">
           <p className="Card-price">£{item.salePrice}</p>
           <Rating
-            count={item.steamRatingCount}
-            rating={item.steamRatingPercent}
+            count={Number(item.steamRatingCount)}
+            rating={Number(item.steamRatingPercent)}
           />
         </section>
       </article>
